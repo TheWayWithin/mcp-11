@@ -13,6 +13,7 @@ import { EnvironmentManager } from './config/env-manager';
 import { MCP_SERVER_REGISTRY, validateRegistry } from './config/mcp-registry';
 import { getPlatformInfo, validateNodeVersion } from './utils/platform';
 import { CLIOptions } from './types/index';
+import discoverCommand from './cli/discover';
 
 const program = new Command();
 
@@ -110,6 +111,11 @@ program
       process.exit(1);
     }
   });
+
+/**
+ * Discover command - Find new MCP services
+ */
+program.addCommand(discoverCommand);
 
 /**
  * Uninstall command - Remove MCP servers

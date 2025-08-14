@@ -189,6 +189,7 @@ npm test -- --coverage
 ## 📚 Documentation
 
 - **[Quick Start Guide](docs/QUICKSTART.md)** - Get up and running in 30 seconds
+- **[Use Cases & MCP Selection](docs/USE_CASES.md)** - Comprehensive use cases with intelligent MCP selection
 - **[API Documentation](docs/API.md)** - Detailed API reference (coming soon)
 - **[Troubleshooting Guide](docs/TROUBLESHOOTING.md)** - Common issues and solutions (coming soon)
 - **[Multi-Agent System](docs/AGENTS.md)** - Learn about @strategist, @developer, @tester (coming soon)

@@ -1,0 +1,404 @@
+{
+  "version": "1.0.0",
+  "description": "Machine-readable MCP metadata for AI agent parsing",
+  "last_updated": "2025-08-14",
+  "mcps": {
+    "Filesystem": {
+      "id": "filesystem",
+      "name": "Filesystem MCP",
+      "category": "core",
+      "capabilities": [
+        "file_read",
+        "file_write",
+        "file_delete",
+        "directory_operations",
+        "path_manipulation"
+      ],
+      "use_cases": [
+        "code_management",
+        "file_operations",
+        "local_storage",
+        "project_structure"
+      ],
+      "domains": ["development", "testing", "content"],
+      "dependencies": [],
+      "api_key_required": false,
+      "installation_time": 30,
+      "confidence_score": 90
+    },
+    "Git": {
+      "id": "git",
+      "name": "Git MCP",
+      "category": "version_control",
+      "capabilities": [
+        "commit",
+        "branch",
+        "merge",
+        "diff",
+        "history",
+        "stash"
+      ],
+      "use_cases": [
+        "version_control",
+        "collaboration",
+        "code_history",
+        "branching_strategy"
+      ],
+      "domains": ["development", "infrastructure"],
+      "dependencies": [],
+      "api_key_required": false,
+      "installation_time": 45,
+      "confidence_score": 92
+    },
+    "GitHub": {
+      "id": "github",
+      "name": "GitHub MCP",
+      "category": "repository",
+      "capabilities": [
+        "pr_management",
+        "issue_tracking",
+        "ci_cd",
+        "releases",
+        "collaboration",
+        "webhooks"
+      ],
+      "use_cases": [
+        "repository_management",
+        "code_review",
+        "issue_tracking",
+        "automation"
+      ],
+      "domains": ["development", "infrastructure", "project_management"],
+      "dependencies": ["git"],
+      "api_key_required": true,
+      "api_key_env": "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "installation_time": 60,
+      "confidence_score": 94
+    },
+    "Playwright": {
+      "id": "playwright",
+      "name": "Playwright MCP",
+      "category": "testing",
+      "capabilities": [
+        "browser_automation",
+        "e2e_testing",
+        "visual_regression",
+        "cross_browser",
+        "mobile_testing",
+        "api_testing"
+      ],
+      "use_cases": [
+        "automated_testing",
+        "ui_testing",
+        "regression_testing",
+        "performance_testing"
+      ],
+      "domains": ["testing", "qa"],
+      "dependencies": ["filesystem"],
+      "api_key_required": false,
+      "installation_time": 120,
+      "confidence_score": 98
+    },
+    "Context7": {
+      "id": "context7",
+      "name": "Context7 MCP",
+      "category": "intelligence",
+      "capabilities": [
+        "context_tracking",
+        "pattern_analysis",
+        "memory_persistence",
+        "insights_generation",
+        "behavior_tracking"
+      ],
+      "use_cases": [
+        "project_context",
+        "code_patterns",
+        "user_behavior",
+        "analytics"
+      ],
+      "domains": ["ALL"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "CONTEXT7_API_KEY",
+      "installation_time": 45,
+      "confidence_score": 85
+    },
+    "Firecrawl": {
+      "id": "firecrawl",
+      "name": "Firecrawl MCP",
+      "category": "research",
+      "capabilities": [
+        "web_scraping",
+        "content_extraction",
+        "structured_data",
+        "api_monitoring",
+        "competitive_analysis"
+      ],
+      "use_cases": [
+        "market_research",
+        "competitor_analysis",
+        "documentation_extraction",
+        "data_collection"
+      ],
+      "domains": ["research", "content", "data_analysis"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "FIRECRAWL_API_KEY",
+      "installation_time": 30,
+      "confidence_score": 96
+    },
+    "Memory": {
+      "id": "memory",
+      "name": "Memory MCP",
+      "category": "storage",
+      "capabilities": [
+        "state_persistence",
+        "session_management",
+        "caching",
+        "data_storage",
+        "context_preservation"
+      ],
+      "use_cases": [
+        "session_persistence",
+        "cache_management",
+        "state_management",
+        "data_retention"
+      ],
+      "domains": ["ALL"],
+      "dependencies": [],
+      "api_key_required": false,
+      "installation_time": 20,
+      "confidence_score": 80
+    },
+    "PostgreSQL": {
+      "id": "postgresql",
+      "name": "PostgreSQL MCP",
+      "category": "database",
+      "capabilities": [
+        "sql_queries",
+        "data_manipulation",
+        "schema_management",
+        "transactions",
+        "indexing"
+      ],
+      "use_cases": [
+        "database_operations",
+        "data_analysis",
+        "reporting",
+        "etl_pipelines"
+      ],
+      "domains": ["data_analysis", "development"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "DATABASE_URL",
+      "installation_time": 60,
+      "confidence_score": 92
+    },
+    "Supabase": {
+      "id": "supabase",
+      "name": "Supabase MCP",
+      "category": "backend",
+      "capabilities": [
+        "authentication",
+        "realtime",
+        "storage",
+        "database",
+        "edge_functions"
+      ],
+      "use_cases": [
+        "backend_services",
+        "user_authentication",
+        "realtime_features",
+        "file_storage"
+      ],
+      "domains": ["development", "infrastructure"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "SUPABASE_URL",
+      "installation_time": 45,
+      "confidence_score": 91
+    },
+    "Railway": {
+      "id": "railway",
+      "name": "Railway MCP",
+      "category": "deployment",
+      "capabilities": [
+        "deployment",
+        "hosting",
+        "scaling",
+        "monitoring",
+        "environment_management"
+      ],
+      "use_cases": [
+        "app_deployment",
+        "infrastructure_management",
+        "scaling",
+        "monitoring"
+      ],
+      "domains": ["infrastructure", "devops"],
+      "dependencies": ["git"],
+      "api_key_required": true,
+      "api_key_env": "RAILWAY_TOKEN",
+      "installation_time": 60,
+      "confidence_score": 93
+    },
+    "Stripe": {
+      "id": "stripe",
+      "name": "Stripe MCP",
+      "category": "payments",
+      "capabilities": [
+        "payment_processing",
+        "subscriptions",
+        "invoicing",
+        "webhooks",
+        "customer_management"
+      ],
+      "use_cases": [
+        "payment_integration",
+        "subscription_management",
+        "billing",
+        "revenue_tracking"
+      ],
+      "domains": ["ecommerce", "saas"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "STRIPE_SECRET_KEY",
+      "installation_time": 45,
+      "confidence_score": 95
+    },
+    "Gmail": {
+      "id": "gmail",
+      "name": "Gmail MCP",
+      "category": "communication",
+      "capabilities": [
+        "email_sending",
+        "email_reading",
+        "automation",
+        "templates",
+        "campaigns"
+      ],
+      "use_cases": [
+        "email_automation",
+        "marketing_campaigns",
+        "notifications",
+        "customer_communication"
+      ],
+      "domains": ["marketing", "support", "communication"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "GMAIL_API_KEY",
+      "installation_time": 30,
+      "confidence_score": 89
+    },
+    "Notion": {
+      "id": "notion",
+      "name": "Notion MCP",
+      "category": "productivity",
+      "capabilities": [
+        "documentation",
+        "project_management",
+        "databases",
+        "collaboration",
+        "templates"
+      ],
+      "use_cases": [
+        "documentation",
+        "project_planning",
+        "knowledge_base",
+        "team_collaboration"
+      ],
+      "domains": ["content", "project_management", "documentation"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "NOTION_API_KEY",
+      "installation_time": 30,
+      "confidence_score": 87
+    },
+    "Figma": {
+      "id": "figma",
+      "name": "Figma MCP",
+      "category": "design",
+      "capabilities": [
+        "design_access",
+        "prototyping",
+        "asset_export",
+        "collaboration",
+        "version_history"
+      ],
+      "use_cases": [
+        "design_integration",
+        "ui_development",
+        "asset_management",
+        "design_systems"
+      ],
+      "domains": ["design", "development", "content"],
+      "dependencies": [],
+      "api_key_required": true,
+      "api_key_env": "FIGMA_ACCESS_TOKEN",
+      "installation_time": 30,
+      "confidence_score": 86
+    }
+  },
+  "task_patterns": [
+    {
+      "pattern": "build|create|implement",
+      "domain": "development",
+      "recommended_mcps": ["filesystem", "git", "github"],
+      "confidence": 95
+    },
+    {
+      "pattern": "test|qa|verify|validate",
+      "domain": "testing",
+      "recommended_mcps": ["playwright", "context7"],
+      "confidence": 98
+    },
+    {
+      "pattern": "analyze|report|dashboard",
+      "domain": "data_analysis",
+      "recommended_mcps": ["postgresql", "analytics"],
+      "confidence": 92
+    },
+    {
+      "pattern": "deploy|release|publish",
+      "domain": "infrastructure",
+      "recommended_mcps": ["github", "railway"],
+      "confidence": 96
+    },
+    {
+      "pattern": "research|investigate|explore",
+      "domain": "research",
+      "recommended_mcps": ["firecrawl", "context7"],
+      "confidence": 97
+    },
+    {
+      "pattern": "design|ui|ux|prototype",
+      "domain": "design",
+      "recommended_mcps": ["figma", "notion"],
+      "confidence": 88
+    },
+    {
+      "pattern": "email|campaign|marketing",
+      "domain": "marketing",
+      "recommended_mcps": ["gmail", "airtable"],
+      "confidence": 91
+    },
+    {
+      "pattern": "payment|billing|subscription",
+      "domain": "ecommerce",
+      "recommended_mcps": ["stripe", "shopify"],
+      "confidence": 95
+    }
+  ],
+  "selection_rules": {
+    "max_mcps_per_task": 5,
+    "min_confidence_threshold": 80,
+    "dependency_resolution": "automatic",
+    "api_key_validation": "required",
+    "fallback_strategy": "suggest_alternatives"
+  },
+  "compatibility": {
+    "mcp7_version": "1.0+",
+    "mcp11_version": "1.0+",
+    "api_version": "2.0"
+  }
+}
